@@ -1,0 +1,19 @@
+driver:
+  typename: .serial
+  ledtype: NEOPIXEL
+  device_id: 0
+  num: 300
+  c_order: GRB
+
+layout:
+  typename: strip
+  brightness: 255
+
+run:
+  fps: 400
+
+aliases:
+  bpa: BiblioPixelAnimations.strip
+
+animation:
+  typename: $bpa.Rainbows.RainbowCycle

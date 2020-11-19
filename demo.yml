@@ -1,0 +1,41 @@
+driver:
+  typename: .serial
+  ledtype: NEOPIXEL
+  device_id: 0
+  num: 300
+  c_order: GRB
+
+layout:
+  typename: strip
+  brightness: 255
+
+aliases:
+  bpa: BiblioPixelAnimations.strip
+
+animation:
+  typename: sequence
+  run:
+    seconds: 40
+    fps: 60
+
+  length: 2
+  animations:
+    - $bpa.ColorChase
+    - $bpa.ColorFade
+    - $bpa.ColorPattern
+    - $bpa.ColorWipe
+    - $bpa.FireFlies
+    - $bpa.HalvesRainbow
+    - $bpa.LarsonScanners.LarsonRainbow
+    - $bpa.LarsonScanners.LarsonScanner
+    - $bpa.LinearRainbow
+    - $bpa.PartyMode
+    - $bpa.PixelPingPong
+    - $bpa.RGBClock
+    - $bpa.Rainbows.Rainbow
+    - $bpa.Rainbows.RainbowCycle
+    - $bpa.Searchlights
+    - $bpa.Wave
+    - $bpa.Wave.WaveMove
+    - $bpa.WhiteTwinkle
+    - $bpa.hexclock
