@@ -1,8 +1,8 @@
 driver:
   typename: .serial
   ledtype: NEOPIXEL
-  device_id: 0
-  num: 300
+  device_id: 1
+  num: 200
   c_order: GRB
 
 layout:
@@ -12,8 +12,8 @@ layout:
 run:
   fps: 60
 
+aliases:
+  bpa: BiblioPixelAnimations.strip
+
 animation:
-  typename: BiblioPixelAnimations.strip.WhiteTwinkle
-  density: 100
-  max_bright: 100
-  speed: 2
+  typename: $bpa.HalvesRainbow

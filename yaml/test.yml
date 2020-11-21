@@ -1,8 +1,8 @@
 driver:
   typename: .serial
   ledtype: NEOPIXEL
-  device_id: 0
-  num: 300
+  device_id: 1
+  num: 194
   c_order: GRB
 
 layout:
@@ -10,11 +10,10 @@ layout:
   brightness: 255
 
 run:
-  fps: 400
+  fps: 120
 
 aliases:
-  bpa: BiblioPixelAnimations.simple
+  bpa: BiblioPixelAnimations.strip
 
 animation:
-  typename: $bpa.LogFade
-  color: red
+  typename: $bpa.ColorFade
