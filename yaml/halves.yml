@@ -2,7 +2,7 @@ driver:
   typename: .serial
   ledtype: NEOPIXEL
   device_id: 1
-  num: 200
+  num: 300
   c_order: GRB
 
 layout:
