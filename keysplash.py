@@ -25,8 +25,30 @@ try:
                 led.push_to_driver()
                 quit()
             elif event.type == pygame.KEYDOWN:
+                index = event.key - 97
+                distance = 5
+                delay = 0.001
+
+                # Light main LED
                 led.all_off()
-                led.setRGB(event.key - 97, 255, 255, 0)
+                led.setHSV(index, (255, 255, 255))
+                led.push_to_driver()
+
+                for i in range(1, distance + 1):
+                    hue = 255 - i * 10
+
+                    # Light next LED
+                    led.setHSV(index - i, (hue, 255, 255))
+                    led.setHSV(index + i, (hue, 255, 255))
+
+                    # Turn off previously-lit LEDs
+                    led.setRGB(index - i + 1, 0, 0, 0)
+                    led.setRGB(index - i - 1, 0, 0, 0)
+
+                    led.push_to_driver()
+                    time.sleep(delay)
+
+                led.all_off()
                 led.push_to_driver()
 
     led.all_off()

@@ -7,7 +7,7 @@ driver:
 
 layout:
   typename: strip
-  brightness: 255
+  brightness: 50
 
 run:
   fps: 400

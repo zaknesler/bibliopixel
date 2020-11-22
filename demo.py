@@ -8,7 +8,7 @@ try:
     # anim = Rainbows.RainbowCycle(led)
 
     led.set_brightness(50)
-    end = 30
+    end = 300
 
     while True:
         for x in range(0, end):

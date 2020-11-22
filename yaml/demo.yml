@@ -38,4 +38,3 @@ animation:
     - $bpa.Wave
     - $bpa.Wave.WaveMove
     - $bpa.WhiteTwinkle
-    # - $bpa.hexclock
