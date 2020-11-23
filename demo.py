@@ -1,11 +1,9 @@
 from bibliopixel import LEDStrip
 from bibliopixel.drivers.serial.driver import *
-# from BiblioPixelAnimations.strip import Rainbows
 
 try:
     driver = DriverSerial(ledtype=LEDTYPE.NEOPIXEL, num=300, c_order='GRB', device_id=1)
     led = LEDStrip(driver)
-    # anim = Rainbows.RainbowCycle(led)
 
     led.set_brightness(50)
     end = 300
