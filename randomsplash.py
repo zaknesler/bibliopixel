@@ -3,22 +3,22 @@ from bibliopixel import LEDStrip
 from bibliopixel.drivers.serial.driver import *
 
 try:
-    driver = DriverSerial(ledtype=LEDTYPE.NEOPIXEL, num=300, c_order='GRB', device_id=1)
+    driver = DriverSerial(ledtype=LEDTYPE.NEOPIXEL, num=92, c_order='GRB', device_id=1)
     led = LEDStrip(driver)
-    led.set_brightness(50)
+    led.set_brightness(255)
 
-    distance = 10
+    distance = 20
     delay = 0.01
 
     while True:
-        index = random.randint(0, 50)
+        index = random.randint(0, driver.numLEDs)
 
         # Light main LED
         led.all_off()
         led.setHSV(index, (255, 255, 255))
         led.push_to_driver()
 
-        for i in range(1, distance + 1):
+        for i in range(0, distance + 1):
             hue = round(255 - ((i * 255) / distance))
 
             # Light next LEDs

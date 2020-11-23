@@ -2,15 +2,15 @@ driver:
   typename: .serial
   ledtype: NEOPIXEL
   device_id: 1
-  num: 300
+  num: 92
   c_order: GRB
 
 layout:
   typename: strip
-  brightness: 50
+  brightness: 255
 
 run:
-  fps: 400
+  fps: 120
 
 aliases:
   bpa: BiblioPixelAnimations.strip

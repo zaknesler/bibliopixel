@@ -7,7 +7,7 @@ try:
     screen = pygame.display.set_mode((400, 200))
     clock = pygame.time.Clock()
 
-    driver = DriverSerial(ledtype=LEDTYPE.NEOPIXEL, num=300, c_order='GRB', device_id=1)
+    driver = DriverSerial(ledtype=LEDTYPE.NEOPIXEL, num=92, c_order='GRB', device_id=1)
     led = LEDStrip(driver)
     led.set_brightness(50)
 
