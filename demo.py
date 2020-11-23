@@ -2,11 +2,11 @@ from bibliopixel import LEDStrip
 from bibliopixel.drivers.serial.driver import *
 
 try:
-    driver = DriverSerial(ledtype=LEDTYPE.NEOPIXEL, num=300, c_order='GRB', device_id=1)
+    driver = DriverSerial(ledtype=LEDTYPE.NEOPIXEL, num=186, c_order='GRB', device_id=1)
     led = LEDStrip(driver)
 
-    led.set_brightness(50)
-    end = 300
+    led.set_brightness(255)
+    end = driver.numLEDs
 
     while True:
         for x in range(0, end):

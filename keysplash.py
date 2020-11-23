@@ -7,9 +7,9 @@ try:
     screen = pygame.display.set_mode((400, 200))
     clock = pygame.time.Clock()
 
-    driver = DriverSerial(ledtype=LEDTYPE.NEOPIXEL, num=300, c_order='GRB', device_id=1)
+    driver = DriverSerial(ledtype=LEDTYPE.NEOPIXEL, num=186, c_order='GRB', device_id=1)
     led = LEDStrip(driver)
-    led.set_brightness(50)
+    led.set_brightness(255)
 
     font = pygame.font.SysFont(None, 24)
     image = font.render('Focus this window and begin typing...', True, pygame.Color('white'))

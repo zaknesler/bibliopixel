@@ -3,7 +3,7 @@ from bibliopixel import LEDStrip
 from bibliopixel.drivers.serial.driver import *
 
 try:
-    driver = DriverSerial(ledtype=LEDTYPE.NEOPIXEL, num=92, c_order='GRB', device_id=1)
+    driver = DriverSerial(ledtype=LEDTYPE.NEOPIXEL, num=186, c_order='GRB', device_id=1)
     led = LEDStrip(driver)
     led.set_brightness(255)
 
@@ -11,7 +11,7 @@ try:
     delay = 0.01
 
     while True:
-        index = random.randint(0, driver.numLEDs)
+        index = random.randint(0, 92)
 
         # Light main LED
         led.all_off()
