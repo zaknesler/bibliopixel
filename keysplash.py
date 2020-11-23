@@ -35,9 +35,9 @@ try:
                 led.push_to_driver()
 
                 for i in range(1, distance + 1):
-                    hue = 255 - i * 10
+                    hue = round(255 - ((i * 255) / distance))
 
-                    # Light next LED
+                    # Light next LEDs
                     led.setHSV(index - i, (hue, 255, 255))
                     led.setHSV(index + i, (hue, 255, 255))
 
