@@ -26,7 +26,7 @@ try:
                 quit()
             elif event.type == pygame.KEYDOWN:
                 index = event.key - 97
-                distance = 5
+                distance = 15
                 delay = 0.001
 
                 # Light main LED
@@ -43,7 +43,7 @@ try:
 
                     # Turn off previously-lit LEDs
                     led.setRGB(index - i + 1, 0, 0, 0)
-                    led.setRGB(index - i - 1, 0, 0, 0)
+                    led.setRGB(index + i - 1, 0, 0, 0)
 
                     led.push_to_driver()
                     time.sleep(delay)
